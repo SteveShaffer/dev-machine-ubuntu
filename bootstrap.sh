@@ -1,7 +1,18 @@
+echo "Adding repositories..."
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+
+
 sudo apt-get update
 
 echo "Installing Java JDK..."
-sudo apt-get install -y default-jdk
+sudo apt-get install -y openjdk-7-jdk
+
+echo "Installing git..."
+sudo apt-get install -y git
+
+echo "Installing Desktop Environment..."
+sudo apt-get install -y ubuntu-desktop
 
 echo "Creating Development Directory..."
 mkdir /home/vagrant/Development
@@ -29,5 +40,11 @@ tar -xf pycharm.tar.gz
 mv pycharm-4.0.2 /home/vagrant/Development/pycharm
 echo "  Cleaning Up..."
 rm pycharm.tar.gz
+
+echo "Giving Development folder over to vagrant..."
+chown -R vagrant /home/vagrant/Development
+
+echo "Installing Chrome..."
+sudo apt-get install -y google-chrome-unstable
 
 echo "All Done.  Enjoy!"

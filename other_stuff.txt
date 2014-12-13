@@ -1,0 +1,10 @@
+Change the default java to the one installed in the bootstrap script (openjdk-7-jdk)
+
+Register PyCharm with the license file
+Change the inotify limit for PyCharm
+Change PyCharm prefrences (which hopefully I can do in the future by just importing a saved prefs file)
+
+Install node and npm with the install_node.sh stuff (while logged in as vagrant)
+Install gulp (npm install -g gulp) (and then probably lots of others...)
+
+Install Chrome (Dev): now added to bootstrap script
