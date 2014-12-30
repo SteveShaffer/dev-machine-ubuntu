@@ -11,8 +11,25 @@ sudo apt-get install -y openjdk-7-jdk
 echo "Installing git..."
 sudo apt-get install -y git
 
+echo "Installing pip..."
+echo "  Downloading..."
+wget https://bootstrap.pypa.io/get-pip.py -qO get-pip.py
+echo "  Installing..."
+sudo python get-pip.py
+echo "  Cleaning Up..."
+rm get-pip.py
+
+echo "Installing boto..."
+sudo pip install boto
+
 echo "Installing Desktop Environment..."
 sudo apt-get install -y ubuntu-desktop
+
+echo "Installing rdesktop..."
+sudo apt-get install rdesktop
+
+echo "Installing VirtualBox Guest Addition dependencies..."
+sudo apt-get install -y dkms build-essential linux-headers-generic
 
 echo "Creating Development Directory..."
 mkdir /home/vagrant/Development
@@ -45,6 +62,6 @@ echo "Giving Development folder over to vagrant..."
 chown -R vagrant /home/vagrant/Development
 
 echo "Installing Chrome..."
-sudo apt-get install -y google-chrome-unstable
+sudo apt-get install -y google-chrome-beta
 
 echo "All Done.  Enjoy!"

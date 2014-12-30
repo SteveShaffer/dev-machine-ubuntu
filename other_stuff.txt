@@ -1,10 +1,23 @@
-Change the default java to the one installed in the bootstrap script (openjdk-7-jdk)
+x Change the default java to the one installed in the bootstrap script (openjdk-7-jdk): Not needed now?
 
 Register PyCharm with the license file
-Change the inotify limit for PyCharm
+x Change the inotify limit for PyCharm: Not needed now?
 Change PyCharm prefrences (which hopefully I can do in the future by just importing a saved prefs file)
 
-Install node and npm with the install_node.sh stuff (while logged in as vagrant)
+Install node and npm with the install_node.sh stuff (while logged in as vagrant) (Maybe we'd prefer "local" to be in Development, but whatever)
 Install gulp (npm install -g gulp) (and then probably lots of others...)
 
-Install Chrome (Dev): now added to bootstrap script
+Add git repos (included in load_git_repos.sh but need password to access)
+
+x Install Chrome (Beta): now added to bootstrap script
+x Installed pip: now added to bootstrap script
+x Installed boto: now added to bootstrap script
+Set boto credentials (from boto creds file)
+
+x sudo apt-get install rdesktop: Now added to bootstrap script
+
+x sudo apt-get install dkms build-essential linux-headers-generic: Now added to bootstrap script
+
+Upgraded all packages that were elligible (but not to 14.04).  Got some weirdness dealing with GRUB but didn't seem to matter.
+Restarted
+Installed (updated) VirtualBox guest additions (but was it necessary?)

@@ -1,2 +1,4 @@
 pycharm_license.txt
 .vagrant
+.boto
+load_git_repos.sh

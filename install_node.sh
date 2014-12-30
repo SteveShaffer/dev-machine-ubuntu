@@ -1,5 +1,5 @@
 mkdir ~/local
-echo 'export PATH=$HOME/Development/local/bin:$PATH' >> ~/.bashrc
+echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
 . ~/.bashrc
 
 cd ~/Development
